@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F8D82331F1D520600C4BA62 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */; };
+		1F8D82361F1D52AD00C4BA62 /* DemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D82351F1D52AD00C4BA62 /* DemoType.swift */; };
+		1F8D823A1F1D55A800C4BA62 /* ObjectRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8D82391F1D55A800C4BA62 /* ObjectRecognition.storyboard */; };
+		1F8D823D1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D823C1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift */; };
 		1FCAF5B81F0F1308000AB997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCAF5B71F0F1308000AB997 /* AppDelegate.swift */; };
-		1FCAF5BA1F0F1308000AB997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCAF5B91F0F1308000AB997 /* ViewController.swift */; };
 		1FCAF5BD1F0F1308000AB997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCAF5BB1F0F1308000AB997 /* Main.storyboard */; };
 		1FCAF5BF1F0F1308000AB997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */; };
 		1FCAF5C21F0F1308000AB997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		1F8D82351F1D52AD00C4BA62 /* DemoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoType.swift; sourceTree = "<group>"; };
+		1F8D82391F1D55A800C4BA62 /* ObjectRecognition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectRecognition.storyboard; sourceTree = "<group>"; };
+		1F8D823C1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognitionViewController.swift; sourceTree = "<group>"; };
 		1FCAF5B41F0F1308000AB997 /* CoreMLDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCAF5B71F0F1308000AB997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FCAF5B91F0F1308000AB997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FCAF5BC1F0F1308000AB997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FCAF5C11F0F1308000AB997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8D82311F1D51E700C4BA62 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D823B1F1D55C300C4BA62 /* Object Recognition */,
+				1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1F8D82341F1D529B00C4BA62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D82351F1D52AD00C4BA62 /* DemoType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F8D82371F1D556500C4BA62 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D82381F1D559500C4BA62 /* Object Recognition */,
+				1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */,
+				1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */,
+				1FCAF5BB1F0F1308000AB997 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1F8D82381F1D559500C4BA62 /* Object Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D82391F1D55A800C4BA62 /* ObjectRecognition.storyboard */,
+			);
+			path = "Object Recognition";
+			sourceTree = "<group>";
+		};
+		1F8D823B1F1D55C300C4BA62 /* Object Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D823C1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift */,
+			);
+			path = "Object Recognition";
+			sourceTree = "<group>";
+		};
 		1FCAF5AB1F0F1308000AB997 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +104,10 @@
 		1FCAF5B61F0F1308000AB997 /* CoreMLDemos */ = {
 			isa = PBXGroup;
 			children = (
+				1F8D82371F1D556500C4BA62 /* UI */,
+				1F8D82341F1D529B00C4BA62 /* Model */,
+				1F8D82311F1D51E700C4BA62 /* View Controllers */,
 				1FCAF5B71F0F1308000AB997 /* AppDelegate.swift */,
-				1FCAF5B91F0F1308000AB997 /* ViewController.swift */,
-				1FCAF5BB1F0F1308000AB997 /* Main.storyboard */,
-				1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */,
-				1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */,
 				1FCAF5C31F0F1308000AB997 /* Info.plist */,
 			);
 			path = CoreMLDemos;
@@ -127,6 +176,7 @@
 				1FCAF5C21F0F1308000AB997 /* LaunchScreen.storyboard in Resources */,
 				1FCAF5BF1F0F1308000AB997 /* Assets.xcassets in Resources */,
 				1FCAF5BD1F0F1308000AB997 /* Main.storyboard in Resources */,
+				1F8D823A1F1D55A800C4BA62 /* ObjectRecognition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCAF5BA1F0F1308000AB997 /* ViewController.swift in Sources */,
 				1FCAF5B81F0F1308000AB997 /* AppDelegate.swift in Sources */,
+				1F8D82331F1D520600C4BA62 /* RootTableViewController.swift in Sources */,
+				1F8D82361F1D52AD00C4BA62 /* DemoType.swift in Sources */,
+				1F8D823D1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
