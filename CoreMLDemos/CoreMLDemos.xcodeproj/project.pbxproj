@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F62C68E1F1E7D7900D4EA1F /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F62C68D1F1E7D7900D4EA1F /* GoogLeNetPlaces.mlmodel */; };
 		1F8D82331F1D520600C4BA62 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */; };
 		1F8D82361F1D52AD00C4BA62 /* DemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D82351F1D52AD00C4BA62 /* DemoType.swift */; };
 		1F8D823A1F1D55A800C4BA62 /* ObjectRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8D82391F1D55A800C4BA62 /* ObjectRecognition.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F62C68D1F1E7D7900D4EA1F /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		1F8D82351F1D52AD00C4BA62 /* DemoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoType.swift; sourceTree = "<group>"; };
 		1F8D82391F1D55A800C4BA62 /* ObjectRecognition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectRecognition.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		1F8D82341F1D529B00C4BA62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F62C68D1F1E7D7900D4EA1F /* GoogLeNetPlaces.mlmodel */,
 				1F8D82351F1D52AD00C4BA62 /* DemoType.swift */,
 			);
 			path = Model;
@@ -62,9 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				1F8D82381F1D559500C4BA62 /* Object Recognition */,
-				1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */,
-				1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */,
-				1FCAF5BB1F0F1308000AB997 /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -104,6 +104,9 @@
 		1FCAF5B61F0F1308000AB997 /* CoreMLDemos */ = {
 			isa = PBXGroup;
 			children = (
+				1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */,
+				1FCAF5BB1F0F1308000AB997 /* Main.storyboard */,
+				1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */,
 				1F8D82371F1D556500C4BA62 /* UI */,
 				1F8D82341F1D529B00C4BA62 /* Model */,
 				1F8D82311F1D51E700C4BA62 /* View Controllers */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FCAF5B81F0F1308000AB997 /* AppDelegate.swift in Sources */,
+				1F62C68E1F1E7D7900D4EA1F /* GoogLeNetPlaces.mlmodel in Sources */,
 				1F8D82331F1D520600C4BA62 /* RootTableViewController.swift in Sources */,
 				1F8D82361F1D52AD00C4BA62 /* DemoType.swift in Sources */,
 				1F8D823D1F1D55E300C4BA62 /* ObjectRecognitionViewController.swift in Sources */,
@@ -257,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -301,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

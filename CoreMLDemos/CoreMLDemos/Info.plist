@@ -34,5 +34,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We need your permission to use the camera to we can try to identify the object you&apos;re taking a picture of.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need your permission to use the picture you&apos;re selecting so we can try identify what it is.</string>
 </dict>
 </plist>
