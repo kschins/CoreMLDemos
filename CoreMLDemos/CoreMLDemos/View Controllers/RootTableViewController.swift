@@ -39,8 +39,13 @@ final class RootTableViewController: UITableViewController {
         }
         
         switch demoType {
-        case .objectRecognition:
-            let storyboard = UIStoryboard(name: "ObjectRecognition", bundle: nil)
+        case .staticObjectRecognition:
+            let storyboard = UIStoryboard(name: "StaticObjectRecognition", bundle: nil)
+            if let vc = storyboard.instantiateInitialViewController() {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        case .liveObjectRecognition:
+            let storyboard = UIStoryboard(name: "LiveObjectRecognition", bundle: nil)
             if let vc = storyboard.instantiateInitialViewController() {
                 navigationController?.pushViewController(vc, animated: true)
             }

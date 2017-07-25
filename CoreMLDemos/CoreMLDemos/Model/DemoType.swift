@@ -9,18 +9,20 @@
 import Foundation
 
 enum DemoType: Int {
-    case objectRecognition, tbd
+    case staticObjectRecognition, liveObjectRecognition, tbd
     
     func name() -> String {
         switch self {
-        case .objectRecognition:
-            return NSLocalizedString("Object Recognition", comment: "")
+        case .staticObjectRecognition:
+            return NSLocalizedString("Static Object Recognition", comment: "")
+        case .liveObjectRecognition:
+            return NSLocalizedString("Live Object Recognition", comment: "")
         case .tbd:
             return NSLocalizedString("To Be Determined", comment: "")
         }
     }
     
     static func count() -> Int {
-        return 2
+        return 3
     }
 }
