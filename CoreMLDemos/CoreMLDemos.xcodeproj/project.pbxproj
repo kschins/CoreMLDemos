@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2F02621F2826590052E209 /* ObjectRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F02611F2826590052E209 /* ObjectRecognition.swift */; };
 		1F439E791F27A44E00681ED8 /* LiveObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F439E781F27A44E00681ED8 /* LiveObjectRecognitionViewController.swift */; };
-		1F439E7E1F27A8D100681ED8 /* ObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F439E7D1F27A8D100681ED8 /* ObjectRecognitionViewController.swift */; };
 		1F439E7F1F27AD2500681ED8 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF173E1F279F2100CB3294 /* Inceptionv3.mlmodel */; };
 		1F439E831F27B98F00681ED8 /* LiveObjectRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F439E821F27B98F00681ED8 /* LiveObjectRecognition.storyboard */; };
 		1F439E841F27C20700681ED8 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F439E801F27B91700681ED8 /* Resnet50.mlmodel */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F2F02611F2826590052E209 /* ObjectRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognition.swift; sourceTree = "<group>"; };
 		1F439E781F27A44E00681ED8 /* LiveObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveObjectRecognitionViewController.swift; sourceTree = "<group>"; };
-		1F439E7D1F27A8D100681ED8 /* ObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognitionViewController.swift; sourceTree = "<group>"; };
 		1F439E801F27B91700681ED8 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		1F439E821F27B98F00681ED8 /* LiveObjectRecognition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LiveObjectRecognition.storyboard; sourceTree = "<group>"; };
 		1F8D82321F1D520600C4BA62 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2F02601F2826310052E209 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		1F439E771F27A3EF00681ED8 /* Live Object Recognition */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +69,6 @@
 		1F439E7A1F27A6D300681ED8 /* Object Recognition */ = {
 			isa = PBXGroup;
 			children = (
-				1F439E7D1F27A8D100681ED8 /* ObjectRecognitionViewController.swift */,
 				1F8D823B1F1D55C300C4BA62 /* Static Object Recognition */,
 				1F439E771F27A3EF00681ED8 /* Live Object Recognition */,
 			);
@@ -92,6 +98,7 @@
 				1F439E801F27B91700681ED8 /* Resnet50.mlmodel */,
 				1FBF173E1F279F2100CB3294 /* Inceptionv3.mlmodel */,
 				1F8D82351F1D52AD00C4BA62 /* DemoType.swift */,
+				1F2F02611F2826590052E209 /* ObjectRecognition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		1FCAF5B61F0F1308000AB997 /* CoreMLDemos */ = {
 			isa = PBXGroup;
 			children = (
+				1F2F02601F2826310052E209 /* Common */,
 				1FCAF5C01F0F1308000AB997 /* LaunchScreen.storyboard */,
 				1FCAF5BB1F0F1308000AB997 /* Main.storyboard */,
 				1FCAF5BE1F0F1308000AB997 /* Assets.xcassets */,
@@ -228,11 +236,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F439E841F27C20700681ED8 /* Resnet50.mlmodel in Sources */,
+				1F2F02621F2826590052E209 /* ObjectRecognition.swift in Sources */,
 				1F439E7F1F27AD2500681ED8 /* Inceptionv3.mlmodel in Sources */,
 				1FCAF5B81F0F1308000AB997 /* AppDelegate.swift in Sources */,
 				1F439E791F27A44E00681ED8 /* LiveObjectRecognitionViewController.swift in Sources */,
 				1F8D82331F1D520600C4BA62 /* RootTableViewController.swift in Sources */,
-				1F439E7E1F27A8D100681ED8 /* ObjectRecognitionViewController.swift in Sources */,
 				1F8D82361F1D52AD00C4BA62 /* DemoType.swift in Sources */,
 				1F8D823D1F1D55E300C4BA62 /* StaticObjectRecognitionViewController.swift in Sources */,
 			);

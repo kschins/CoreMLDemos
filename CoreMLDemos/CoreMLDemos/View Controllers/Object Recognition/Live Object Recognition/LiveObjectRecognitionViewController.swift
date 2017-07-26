@@ -7,17 +7,16 @@
 //
 
 import UIKit
-import CoreML
-import Vision
 import AVFoundation
 
-final class LiveObjectRecognitionViewController: ObjectRecognitionViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+final class LiveObjectRecognitionViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     // MARK: - Private Properties
     
     private let session = AVCaptureSession()
     private let captureQueue = DispatchQueue(label: "captureQueue")
-    private var capturePreviewLayer: AVCaptureVideoPreviewLayer!
+    private var capturePreviewLayer: AVCaptureVideoPreviewLayer?
+    private var useCoreML = true
     
     // MARK: - IBOutlets
     
@@ -39,7 +38,7 @@ final class LiveObjectRecognitionViewController: ObjectRecognitionViewController
         if let camera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) {
             // add the capture layer to the capture view so we can see the camera session
             capturePreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-            captureView.layer.addSublayer(capturePreviewLayer)
+            captureView.layer.addSublayer(capturePreviewLayer!)
             
             // create input and output streams for the camera
             let cameraInputDevice = try? AVCaptureDeviceInput(device: camera)
@@ -67,34 +66,31 @@ final class LiveObjectRecognitionViewController: ObjectRecognitionViewController
     
     deinit {
         // tear down session
-        session.stopRunning()
-        capturePreviewLayer.removeFromSuperlayer()
-        capturePreviewLayer = nil
+        if let capturePreviewLayer = capturePreviewLayer {
+            session.stopRunning()
+            capturePreviewLayer.removeFromSuperlayer()
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        capturePreviewLayer.frame = captureView.bounds
+        
+        if let capturePreviewLayer = capturePreviewLayer {
+            capturePreviewLayer.frame = captureView.bounds
+        }
     }
     
     func captureOutput(_ output: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            // error processing buffer
-            return
+        ObjectRecognition.shared.analyzeImageBuffer(imageBuffer: sampleBuffer, withCoreML: useCoreML) { result in
+            self.nameLabel.text = result["identifier"]
+            self.confidenceLabel.text = result["confidence"]
         }
-        
-        var options : [VNImageOption : Any] = [:]
-        
-        if let data = CMGetAttachment(sampleBuffer, kCMSampleBufferAttachmentKey_CameraIntrinsicMatrix, nil) {
-            options = [.cameraIntrinsics : data]
-        }
-        
-        let requestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .downMirrored, options: options)
-        analyze(handler: requestHandler) { results in
-            let classification = results[0]
-            self.nameLabel.text = classification.identifier
-            self.confidenceLabel.text = "\((classification.confidence * 100).rounded())%"
-        }
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction private func useCoreMLSwitchChanged(sender: UISwitch) {
+        useCoreML = sender.isOn
     }
     
 }

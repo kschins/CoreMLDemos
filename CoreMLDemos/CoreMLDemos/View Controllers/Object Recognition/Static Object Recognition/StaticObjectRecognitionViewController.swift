@@ -7,10 +7,12 @@
 //
 
 import UIKit
-import CoreML
 import Vision
 
-final class StaticObjectRecognitionViewController: ObjectRecognitionViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+final class StaticObjectRecognitionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    // MARK: - Properties
+    private var results = [VNClassificationObservation]()
     
     // MARK: - IBOutlets
     
@@ -21,6 +23,10 @@ final class StaticObjectRecognitionViewController: ObjectRecognitionViewControll
     
     @IBAction private func cameraButtonTapped() {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let alertVC = UIAlertController(title: NSLocalizedString("Camera Not Available on this Device.", comment: ""), message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
+            alertVC.addAction(okAction)
+            present(alertVC, animated: true)
             return
         }
         
@@ -75,7 +81,7 @@ final class StaticObjectRecognitionViewController: ObjectRecognitionViewControll
         // analyze image
         let handler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
         
-        analyze(handler: handler) { results in
+        ObjectRecognition.shared.analyze(handler: handler) { results in
             self.results = results
             self.tableView.reloadData()
         }
