@@ -22,11 +22,17 @@ final class LiveObjectRecognitionViewController: ObjectRecognitionViewController
     // MARK: - IBOutlets
     
     @IBOutlet private var captureView: UIView!
+    @IBOutlet private var resultView: UIView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var confidenceLabel: UILabel!
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // some view setup
+        resultView.layer.cornerRadius = 16
         
         // setup the video camera session
         // first see if the camera is even available - need a device, if not - show alert
@@ -59,9 +65,7 @@ final class LiveObjectRecognitionViewController: ObjectRecognitionViewController
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
+    deinit {
         // tear down session
         session.stopRunning()
         capturePreviewLayer.removeFromSuperlayer()
@@ -87,7 +91,9 @@ final class LiveObjectRecognitionViewController: ObjectRecognitionViewController
         
         let requestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .downMirrored, options: options)
         analyze(handler: requestHandler) { results in
-            print(results)
+            let classification = results[0]
+            self.nameLabel.text = classification.identifier
+            self.confidenceLabel.text = "\((classification.confidence * 100).rounded())%"
         }
     }
     

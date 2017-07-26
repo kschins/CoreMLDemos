@@ -34,7 +34,7 @@ class ObjectRecognitionViewController: UIViewController {
                 fatalError("Error calculating results.")
             }
             
-            let classifications = results[0...4].flatMap({ $0 })
+            let classifications = results[0...6].flatMap({ $0 })
             
             DispatchQueue.main.async {
                 completion(classifications)

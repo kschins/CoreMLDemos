@@ -16,16 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="wW6-8B-v26">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utq-jf-vCH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRI-Wy-dyq">
+                                <rect key="frame" x="16" y="591" width="343" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CU-DH-oGx">
+                                        <rect key="frame" x="8" y="20" width="37.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MY-Ji-kuw">
+                                        <rect key="frame" x="289.5" y="20" width="37.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5MY-Ji-kuw" secondAttribute="bottom" constant="20" id="76X-oA-e1V"/>
+                                    <constraint firstAttribute="bottom" secondItem="1CU-DH-oGx" secondAttribute="bottom" constant="20" id="7wA-Jw-UxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5MY-Ji-kuw" secondAttribute="trailing" constant="16" id="GRM-jf-n7Q"/>
+                                    <constraint firstItem="1CU-DH-oGx" firstAttribute="top" secondItem="XRI-Wy-dyq" secondAttribute="top" constant="20" id="cSC-3k-xbr"/>
+                                    <constraint firstAttribute="height" constant="60" id="ptx-X0-A7g"/>
+                                    <constraint firstItem="1CU-DH-oGx" firstAttribute="leading" secondItem="XRI-Wy-dyq" secondAttribute="leading" constant="8" id="y9m-mS-P4A"/>
+                                    <constraint firstItem="5MY-Ji-kuw" firstAttribute="top" secondItem="XRI-Wy-dyq" secondAttribute="top" constant="20" id="zf7-Bv-zQD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Utq-jf-vCH" firstAttribute="top" secondItem="wW6-8B-v26" secondAttribute="top" id="1YQ-0h-gnw"/>
+                            <constraint firstItem="Utq-jf-vCH" firstAttribute="leading" secondItem="iHd-Z7-rpd" secondAttribute="leading" id="47l-wy-Xfa"/>
+                            <constraint firstItem="XRI-Wy-dyq" firstAttribute="leading" secondItem="iHd-Z7-rpd" secondAttribute="leading" constant="16" id="AXW-ri-vKn"/>
+                            <constraint firstItem="Utq-jf-vCH" firstAttribute="trailing" secondItem="iHd-Z7-rpd" secondAttribute="trailing" id="AYk-rE-eBD"/>
+                            <constraint firstItem="iHd-Z7-rpd" firstAttribute="bottom" secondItem="XRI-Wy-dyq" secondAttribute="bottom" constant="16" id="MbG-CS-rh1"/>
+                            <constraint firstItem="iHd-Z7-rpd" firstAttribute="trailing" secondItem="XRI-Wy-dyq" secondAttribute="trailing" constant="16" id="REA-U7-rfp"/>
+                            <constraint firstItem="Utq-jf-vCH" firstAttribute="bottom" secondItem="iHd-Z7-rpd" secondAttribute="bottom" id="g3h-jR-GF4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iHd-Z7-rpd"/>
                     </view>
                     <connections>
-                        <outlet property="captureView" destination="wW6-8B-v26" id="TEs-tv-wp7"/>
+                        <outlet property="captureView" destination="Utq-jf-vCH" id="HoG-HV-YiX"/>
+                        <outlet property="confidenceLabel" destination="5MY-Ji-kuw" id="Tiy-te-V2q"/>
+                        <outlet property="nameLabel" destination="1CU-DH-oGx" id="fzO-ib-yg9"/>
+                        <outlet property="resultView" destination="XRI-Wy-dyq" id="j8s-Nf-RFd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44n-kj-JRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-511" y="166"/>
+            <point key="canvasLocation" x="-511.19999999999999" y="165.06746626686657"/>
         </scene>
     </scenes>
 </document>
